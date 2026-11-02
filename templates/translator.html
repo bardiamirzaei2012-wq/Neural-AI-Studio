@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Translator | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            AI TRANSLATOR
+        </span>
+
+        <h1>
+            Smart Translator
+        </h1>
+
+        <p>
+            Translate your text into your preferred language.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="translator-shell">
+
+    <div class="language-bar">
+
+        <div class="language-select">
+
+            <label>
+                Source Language
+            </label>
+
+            <select
+                id="fromLanguage"
+                class="input-field"
+            >
+
+                <option value="fa">
+                    Persian
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="ar">
+                    Arabic
+                </option>
+
+                <option value="de">
+                    Deutsch
+                </option>
+
+                <option value="fr">
+                    Français
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="swapLanguages"
+            class="swap-btn"
+        >
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+
+
+        <div class="language-select">
+
+            <label>
+                Target Language
+            </label>
+
+            <select
+                id="toLanguage"
+                class="input-field"
+            >
+
+                <option value="en">
+                    English
+                </option>
+
+                <option value="fa">
+                    Persian
+                </option>
+
+                <option value="ar">
+                    Arabic
+                </option>
+
+                <option value="de">
+                    Deutsch
+                </option>
+
+                <option value="fr">
+                    Français
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <form id="translatorForm">
+
+        <div class="translator-grid">
+
+            <div class="workspace-card">
+
+                <h3>
+                    Input Text
+                </h3><br>
+
+                <textarea
+                    id="translatorInput"
+                    class="input-field textarea translator-textarea"
+                    placeholder="Enter your text..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="workspace-card">
+
+                <h3>
+                    Translation
+                </h3><br>
+
+                <div
+                    id="translatorResult"
+                    class="result-box translator-result"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+
+                        <strong>
+                            Ready to translate
+                        </strong>
+
+                        <span>
+                            Enter your text.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                data-clear-target="translatorInput"
+            >
+                <i class="fa-solid fa-eraser"></i>
+                Clear
+            </button>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                <i class="fa-solid fa-language"></i>
+                Translation
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+{% endblock %}

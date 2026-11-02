@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block title %}
+Image Generator | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            IMAGE AI
+        </span>
+
+        <h1>
+            Smart Image Generator
+        </h1>
+
+        <p>
+            Turn your visual idea into a professional prompt.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="workspace-grid">
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Image Idea
+                </h2>
+
+                <p>
+                    Describe the image you want.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="imageForm">
+
+            <div class="form-group">
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    id="imageDescription"
+                    class="input-field textarea large-textarea"
+                    placeholder="For example: a humanoid robot in a futuristic laboratory..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Style
+                    </label>
+
+                    <select
+                        id="imageStyle"
+                        class="input-field"
+                    >
+
+                        <option value="cinematic">
+                            Cinematic
+                        </option>
+
+                        <option value="realistic">
+                            Realistic
+                        </option>
+
+                        <option value="anime">
+                            Anime
+                        </option>
+
+                        <option value="3d">
+                            3D Render
+                        </option>
+
+                        <option value="digital">
+                            Digital Art
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Aspect Ratio
+                    </label>
+
+                    <select
+                        id="imageRatio"
+                        class="input-field"
+                    >
+
+                        <option value="16:9">
+                            16:9
+                        </option>
+
+                        <option value="1:1">
+                            1:1
+                        </option>
+
+                        <option value="9:16">
+                            9:16
+                        </option>
+
+                        <option value="4:3">
+                            4:3
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-full"
+            >
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Generate Image Prompt
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Final Prompt
+                </h2>
+
+                <p>
+                    Your ready-to-use prompt will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="imageResult"
+            class="result-box result-large"
+        >
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+
+                <strong>
+                    No prompt generated yet
+                </strong>
+
+                <span>
+                    Enter an image description.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn btn-secondary"
+            data-copy-target="imageResult"
+        >
+
+            <i class="fa-solid fa-copy"></i>
+
+            Copy Prompt
+
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}

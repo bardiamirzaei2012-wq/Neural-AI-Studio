@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Writer | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            AI WRITER
+        </span>
+
+        <h1>
+            Smart Writer
+        </h1>
+
+        <p>
+            Generate any type of content faster.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="workspace-grid">
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+                <h2>Content Settings</h2>
+                <p>Choose the content type and writing style.</p>
+            </div>
+
+        </div>
+
+
+        <form id="writerForm">
+
+            <div class="form-group">
+
+                <label>
+                    Topic
+                </label>
+
+                <textarea
+                    id="writerInput"
+                    class="input-field textarea"
+                    placeholder="Enter your topic..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Content Type
+                    </label>
+
+                    <select
+                        id="writerType"
+                        class="input-field"
+                    >
+                        <option value="article">
+                            Article
+                        </option>
+
+                        <option value="caption">
+                            Caption
+                        </option>
+
+                        <option value="blog">
+                            Blog Post
+                        </option>
+
+                        <option value="story">
+                            Story
+                        </option>
+
+                        <option value="email">
+                            Email
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Tone
+                    </label>
+
+                    <select
+                        id="writerTone"
+                        class="input-field"
+                    >
+                        <option value="professional">
+                            Professional
+                        </option>
+
+                        <option value="friendly">
+                            Friendly
+                        </option>
+
+                        <option value="creative">
+                            Creative
+                        </option>
+
+                        <option value="formal">
+                            Formal
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Length
+                    </label>
+
+                    <select
+                        id="writerLength"
+                        class="input-field"
+                    >
+                        <option value="short">
+                            Short
+                        </option>
+
+                        <option value="medium">
+                            Medium
+                        </option>
+
+                        <option value="long">
+                            Long
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-full"
+            >
+
+                <i class="fa-solid fa-pen-nib"></i>
+
+                Generate Content
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Output
+                </h2>
+
+                <p>
+                    Generated content will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="result-box result-large"
+            id="writerResult"
+        >
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+
+                <strong>
+                    Ready to generate content
+                </strong>
+
+                <span>
+                    Enter a topic.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn btn-secondary"
+            data-copy-target="writerResult"
+        >
+
+            <i class="fa-solid fa-copy"></i>
+
+            Copy Text
+
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}

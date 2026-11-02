@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Neural AI Studio - AI Studio"
+    >
+
+    <title>{% block title %}Neural AI Studio{% endblock %}</title>
+
+    <!-- Theme Before Page Render -->
+    <script>
+        (function () {
+            const theme =
+                localStorage.getItem("neural-ai-theme") || "dark";
+
+            document.documentElement.setAttribute(
+                "data-theme",
+                theme
+            );
+        })();
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- Mobile Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-inner">
+
+            <!-- Brand -->
+            <a href="{{ url_for('index') }}" class="brand">
+
+                <div class="brand-icon">
+
+                    <img
+                        src="{{ url_for('static', filename='images/logo.png') }}"
+                        alt="Neural AI"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                    >
+
+                    <span
+                        class="brand-fallback"
+                        style="display:none;"
+                    >
+                        N
+                    </span>
+
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>Neural AI</strong>
+
+                    <span>Studio</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+
+                <div class="nav-title">
+                    Studio
+                </div>
+
+                <a
+                    href="{{ url_for('index') }}"
+                    class="nav-item"
+                >
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="{{ url_for('chat') }}"
+                    class="nav-item"
+                >
+                    <span>Smart Assistant</span>
+                </a>
+
+                <a
+                    href="{{ url_for('enhancer') }}"
+                    class="nav-item"
+                >
+                    <span>Enhance Prompt</span>
+                </a>
+
+                <a
+                    href="{{ url_for('writer') }}"
+                    class="nav-item"
+                >
+                    <span>AI Writer</span>
+                </a>
+
+                <a
+                    href="{{ url_for('translator') }}"
+                    class="nav-item"
+                >
+                    <span>AI Translator</span>
+                </a>
+
+                <a
+                    href="{{ url_for('image') }}"
+                    class="nav-item"
+                >
+                    <span>Image Prompt Generator</span>
+                </a>
+
+
+                <div class="nav-title nav-title-space">
+                    System
+                </div>
+
+                <a
+                    href="{{ url_for('settings') }}"
+                    class="nav-item"
+                >
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="sidebar-bottom">
+
+                <div class="ai-status">
+
+                <span class="ai-online-status">
+                    <i class="fa-solid fa-circle"></i>
+                        AI Ready
+                </span>
+
+
+                </div>
+
+                <a
+                    href="{{ url_for('logout') }}"
+                    class="logout-link"
+                >
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    type="button"
+                    id="mobileMenuBtn"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="topbar-title">
+
+                    <span>Neural AI Studio</span>
+
+                    <small>
+                        Smart content generation and processing environment
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <div class="theme-label">
+
+                    <span id="themeText">
+                        Dark mode
+                    </span>
+
+                    <button
+                        class="theme-toggle"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle theme"
+                    >
+                        <i class="fa-solid fa-sun sun-icon"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </button>
+
+                </div>
+
+                <a
+                    href="{{ url_for('settings') }}"
+                    class="icon-btn"
+                >
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- Page -->
+        <section class="page-content">
+
+            {% block content %}
+            {% endblock %}
+
+        </section>
+
+
+        <footer class="footer">
+
+            <span>
+                © 2026 Neural AI Studio
+            </span>
+
+            <span>
+                Built with
+                <i class="fa-solid fa-bolt"></i>
+                for the future
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Toast -->
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+    <!-- Main JS -->
+    <script
+        src="{{ url_for('static', filename='js/app.js') }}"
+    ></script>
+
+</body>
+
+</html>

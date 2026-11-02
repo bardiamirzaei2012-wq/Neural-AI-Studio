@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}
+Settings | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            SETTINGS
+        </span>
+
+        <h1>
+            Settings
+        </h1>
+
+        <p>
+            Customize your Neural AI workspace.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="settings-layout">
+
+
+    <!-- Profile -->
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            B
+        </div>
+
+        <h2>
+            Neural User
+        </h2>
+
+        <p>
+            Neural AI Studio User
+        </p>
+
+        <span class="profile-badge">
+            <i class="fa-solid fa-circle-check"></i>
+            Active
+        </span>
+
+    </div>
+
+
+    <!-- Settings -->
+
+    <div class="settings-card">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    General Settings
+                </h2>
+
+                <p>
+                    Control application behavior.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-list">
+
+            <div class="setting-item">
+
+                <div class="setting-info">
+
+                    <div class="setting-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Notifications
+                        </strong>
+
+                        <span>
+                            Show system notifications
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span class="switch-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <div class="setting-info">
+
+                    <div class="setting-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Smart Suggestions
+                        </strong>
+
+                        <span>
+                            Show AI suggestions
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span class="switch-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <div class="setting-info">
+
+                    <div class="setting-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Save History
+                        </strong>
+
+                        <span>
+                            Save recent conversations
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span class="switch-slider"></span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Danger -->
+
+    <div class="settings-card danger-zone">
+
+        <div class="card-header">
+
+            <div>
+
+                <h2>
+                    Danger Zone
+                </h2>
+
+                <p>
+                    Local settings operations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="btn btn-danger"
+            id="resetSettings"
+        >
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Reset Settings
+
+        </button>
+
+    </div>
+
+
+</section>
+
+{% endblock %}

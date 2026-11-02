@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block title %}
+Neural AI Studio | Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+        <span class="page-kicker">
+            NEURAL AI
+        </span>
+
+        <h1>
+            AI Dashboard
+        </h1>
+
+        <p>
+            Manage all your AI tools from one modern workspace.
+        </p>
+    </div>
+
+</div>
+
+
+<!-- Hero -->
+
+<section class="hero-card">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <span></span>
+            AI system is online
+        </div>
+
+        <h2 class="hero-title">
+            Turn your idea into
+            <span>Result</span>
+            
+        </h2>
+
+        <p class="hero-description">
+            Write content with Neural AI,
+            improve your prompts,
+            translate text, and create ideas for images.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="{{ url_for('chat') }}"
+                class="btn btn-primary"
+            >
+                <i class="fa-solid fa-message"></i>
+                Start Chat
+            </a>
+
+            <a
+                href="{{ url_for('enhancer') }}"
+                class="btn btn-secondary"
+            >
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Enhance Prompt
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-orb">
+
+            <div class="orb-ring ring-one"></div>
+            <div class="orb-ring ring-two"></div>
+            <div class="orb-ring ring-three"></div>
+
+            <div class="orb-core">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Stats -->
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <div class="stat-icon cyan">
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+
+        <div>
+            <strong>6</strong>
+            <span>AI Tool</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon green">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <div>
+            <strong>24/7</strong>
+            <span>AI Assistant</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon purple">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <div>
+            <strong>10+</strong>
+            <span>Language</span>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon orange">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+        <div>
+            <strong>∞</strong>
+            <span>Idea</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Tools -->
+
+<div class="section-heading">
+
+    <div>
+        <span class="section-kicker">
+            AI TOOLS
+        </span>
+
+        <h2>
+            Smart Tools
+        </h2>
+    </div>
+
+</div>
+
+
+<section class="tool-grid">
+
+    <a
+        href="{{ url_for('chat') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon cyan">
+            <i class="fa-solid fa-message"></i>
+        </div>
+
+        <h3>Smart Assistant</h3>
+
+        <p>
+            Chat with the Neural AI assistant and get answers.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('enhancer') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon purple">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+
+        <h3>Prompt Enhancer</h3>
+
+        <p>
+            Turn a simple prompt into a professional prompt.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('writer') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon green">
+            <i class="fa-solid fa-pen-nib"></i>
+        </div>
+
+        <h3>AI Writer</h3>
+
+        <p>
+            Generate text, articles, captions, and professional content.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('translator') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon blue">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <h3>AI Translator</h3>
+
+        <p>
+            Translate your text into different languages.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('image') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon pink">
+            <i class="fa-solid fa-image"></i>
+        </div>
+
+        <h3>Image Generator</h3>
+
+        <p>
+            Turn your visual ideas into prompts.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+
+    <a
+        href="{{ url_for('settings') }}"
+        class="tool-card"
+    >
+
+        <div class="tool-icon orange">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <h3>Settings</h3>
+
+        <p>
+            Manage your Neural AI workspace settings.
+        </p>
+
+        <span class="tool-arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </a>
+
+</section>
+
+{% endblock %}

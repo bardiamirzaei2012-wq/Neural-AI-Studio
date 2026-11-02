@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smart Assistant | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            AI ASSISTANT
+        </span>
+
+        <h1>
+            Smart Assistant
+        </h1>
+
+        <p>
+            Chat with Neural AI and local AI models.
+        </p>
+
+    </div>
+
+</div>
+
+<section class="chat-shell">
+
+    <!-- =========================
+         CHAT HEADER
+    ========================== -->
+
+    <div class="chat-header">
+
+        <div class="chat-agent">
+
+            <div class="chat-avatar">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    Neural AI
+                </strong>
+
+                <span class="ai-online-status">
+                    <i class="fa-solid fa-circle"></i>
+                    Online
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="chat-header-actions">
+
+            <!-- New Chat -->
+            <button
+                type="button"
+                class="icon-btn"
+                id="newChat"
+                title="New Chat"
+            >
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+
+            <!-- Clear Chat -->
+            <button
+                type="button"
+                class="icon-btn"
+                id="clearChat"
+                title="Clear Chat"
+            >
+                <i class="fa-solid fa-trash"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- =========================
+         CHAT MESSAGES
+    ========================== -->
+
+    <div
+        class="chat-messages"
+        id="chatMessages"
+    >
+
+    </div>
+
+
+
+    <!-- =========================
+         CHAT FORM
+    ========================== -->
+
+    <form
+        class="chat-form"
+        id="chatForm"
+    >
+
+        <div class="chat-input-wrapper">
+
+            <textarea
+                id="chatInput"
+                class="input-field textarea chat-input"
+                placeholder="Write your message "
+                rows="1"
+                autocomplete="off"
+            ></textarea>
+
+        </div>
+
+
+        <!-- Stop -->
+
+        <button
+            type="button"
+            id="stopGeneration"
+            class="stop-btn"
+            hidden
+            title="Stop Answering "
+        >
+            <i class="fa-solid fa-stop"></i>
+        </button>
+
+
+        <!-- Send -->
+
+        <button
+            type="submit"
+            class="send-btn"
+            title="Send Mesage"
+        >
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+    </form>
+
+
+    <!-- =========================
+         CHAT FOOTER
+    ========================== -->
+
+    <div class="chat-footer">
+
+
+
+        <span>
+            <i class="fa-solid fa-bolt"></i>
+            Streaming Active
+        </span>
+
+        <span>
+            <i class="fa-solid fa-keyboard"></i>
+            Enter For Send Message
+        </span>
+
+    </div>
+
+</section>
+
+{% endblock %}

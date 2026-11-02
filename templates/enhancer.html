@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}
+Prompt Enhancer | Neural AI
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <span class="page-kicker">
+            PROMPT ENGINEERING
+        </span>
+
+        <h1>
+            Enhance Prompt
+        </h1>
+
+        <p>
+            Turn your simple idea into a professional prompt.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="workspace-grid">
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+                <h2>Initial Prompt</h2>
+                <p>Enter your idea.</p>
+            </div>
+
+            <span class="card-number">
+                01
+            </span>
+
+        </div>
+
+
+        <form id="enhancerForm">
+
+            <textarea
+                id="enhancerInput"
+                class="input-field textarea large-textarea"
+                placeholder="For example: build a modern AI website..."
+            ></textarea>
+
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-clear-target="enhancerInput"
+                >
+                    <i class="fa-solid fa-eraser"></i>
+                    Clear
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Enhance Prompt
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="workspace-card">
+
+        <div class="card-header">
+
+            <div>
+                <h2>Result</h2>
+                <p>Your optimized prompt will appear here.</p>
+            </div>
+
+            <span class="card-number">
+                02
+            </span>
+
+        </div>
+
+
+        <div
+            class="result-box"
+            id="enhancerResult"
+        >
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+                <strong>
+                    Nothing generated yet
+                </strong>
+
+                <span>
+                    Enter your prompt.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn btn-secondary"
+            data-copy-target="enhancerResult"
+        >
+            <i class="fa-solid fa-copy"></i>
+            Copy Result
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}
